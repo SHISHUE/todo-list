@@ -38,20 +38,20 @@ function handleClick() {
 </script>
 
 <template>
-    <div class="flex items-center gap-5 ">
+    <div class="flex items-center gap-2 md:gap-5 ">
         <input required v-model="task"  type="text"
-            class="lg:w-[30rem] shadow-lg border-2 rounded-full px-4 py-2 bg-transparent text-[#1D3557] font-nunito text-xl font-semibold focus:outline-none placeholder-nunito placeholder:text-[#1D3557] placeholder:text-xl placeholder:font-semibold border-[#1D3557]"
+            class="w-[30rem] sm:w-[32rem] shadow-lg border-2 rounded-full px-4  py-2 bg-transparent text-[#1D3557] font-nunito lg:text-xl font-semibold focus:outline-none placeholder-nunito placeholder:text-[#1D3557] placeholder:lg:text-xl placeholder:font-semibold border-[#1D3557]"
             placeholder="Add Task" />
 
         <button @click="handleClick"
             class=" group flex relative items-center bg-[#F1FAEE] rounded-full shadow-md font-nunito font-semibold text-[#1D3557] transition-all duration-300 ease-in-out"
-            style="min-width: 3rem;">
+            >
             <img src="../assets/icons/add.svg" alt="add-icon"
                 class="w-[3rem] group-hover:shadow-lg rounded-full z-10 transition-all duration-300 ease-in-out" />
 
 
             <span
-                class=" bg-[#F1FAEE] h-[3rem] -left-11 shadow-md  overflow-hidden rounded-full -z-1 items-center w-[6rem] absolute hidden group-hover:inline-flex group-hover:translate-x-[2.8rem] transition-all duration-500 ease-in-out pl-3">
+                class=" bg-[#F1FAEE] h-[3rem] -left-11 shadow-md  overflow-hidden rounded-full -z-1 items-center w-[6rem] absolute hidden group-hover:lg:inline-flex group-hover:lg:translate-x-[2.8rem] transition-all duration-500 ease-in-out pl-3">
                 <p class="whitespace-nowrap transition-all duration-300 ease-in-out ml-[2.5rem]">Add</p>
             </span>
         </button>

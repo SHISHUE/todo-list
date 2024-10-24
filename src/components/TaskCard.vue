@@ -7,7 +7,7 @@ import StarIcon from '../assets/icons/star.svg'
 import CheckIcon from '../assets/icons/check.svg'
 
 const props = defineProps(['task'])
-console.log(props.task);
+
 
 const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
@@ -82,7 +82,7 @@ function clickHandler(target: string, val: number) {
             if((taskRef.value.innerText.length >= 5) && (taskRef.value.innerText.length <= 30)) emit('updateTodo', {val: taskRef.value?.innerText, index: val})
 
         }
-        console.log(taskRef.value?.innerText);
+      
     }
 
 
@@ -97,8 +97,8 @@ function clickHandler(target: string, val: number) {
 </script>
 
 <template>
-    <div :class="{ ' animate-bounce hover:animate-none': props.task.isImportant }"
-        class="relative bg-gradient-to-r from-zinc-950 to-[#182a44d5] text-stone-50 w-[35rem] p-5 h-[22rem] border-2 hover:bg-zinc-950 hover:scale-105 transition-all duration-300 ease-in-out hover:backdrop-blur-lg hover:backdrop-brightness-100 hover:border-[#1D3557] hover:bg-transparent aspect-square rounded-xl shadow-lg">
+    <div :class="{ ' lg:animate-bounce lg:hover:animate-none': props.task.isImportant }"
+        class="relative bg-gradient-to-r from-zinc-950 to-[#182a44d5] text-stone-50 w-[35rem] p-5  h-[22rem] border-2 hover:bg-zinc-950 hover:scale-105 transition-all duration-300 ease-in-out hover:backdrop-blur-lg hover:backdrop-brightness-100 hover:border-[#1D3557] hover:bg-transparent aspect-square rounded-xl shadow-lg">
         <h1 class=" text-opacity-60 font-nunito font-semibold"></h1>
         <h1
             class="text-[2.5rem] bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent font-nunito font-bold">

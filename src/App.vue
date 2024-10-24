@@ -57,18 +57,18 @@ function updateTodo({val, index}: {val:string, index: number}){
 
 
 <template>
-  <div class=" w-11/12 mx-auto ">
+  <div class="w-11/12 mx-auto ">
     <div
-      class="flex justify-center font-[Poppins] lg:text-[11rem]  text-[3.5rem] lg:tracking-tight font-semibold text-[#1D3557] items-center gap-4 lg:gap-8">
+      class="flex justify-center font-[Poppins] lg:text-[11rem] md:text-[5rem]  text-[3rem] md:tracking-tight font-semibold text-[#1D3557] items-center  md:gap-8">
       <span>TODO</span>
-      <span><img src="./assets/icons/todo_logo.svg" alt="logo" class="lg:w-[6.5rem] w-[3.5rem]" /></span>
+      <span><img src="./assets/icons/todo_logo.svg" alt="logo" class="md:w-[6.5rem] w-[3.5rem]" /></span>
       <span>LIST</span>
     </div>
 
 
-    <AddTask class="flex justify-center lg:my-8 my-12" @add:task="takeTask" />
+     <AddTask class="flex justify-center lg:my-8 my-12" @add:task="takeTask" />
 
-    <div v-if="tasks.length === 0" class="lg:mt-44  text-center text-[3rem] lg:text-[4.5rem] font-nunito font-semibold text-gray-400">TODO LIST IS EMPTY</div>
+    <div v-if="tasks.length === 0" class="lg:mt-44  text-center text-[3rem] md:text-[4.5rem] font-nunito font-semibold text-gray-400">TODO LIST IS EMPTY</div>
     <RenderTask :tasks="tasks" @update-todo="updateTodo"  @update-important="updateImportant" @update-task-status="updateTaskStatus" />
   </div>
 </template>
