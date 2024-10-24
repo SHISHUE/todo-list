@@ -57,7 +57,7 @@ function updateTodo({val, index}: {val:string, index: number}){
 
 
 <template>
-  <div class="w-11/12 mx-auto ">
+  <div class="w-11/12 mx-auto overflow-x-hidden">
     <div
       class="flex justify-center font-[Poppins] lg:text-[11rem] md:text-[5rem]  text-[3rem] md:tracking-tight font-semibold text-[#1D3557] items-center  md:gap-8">
       <span>TODO</span>
